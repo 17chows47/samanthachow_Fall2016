@@ -1,3 +1,6 @@
+// Samantha Chow
+// Date: August 29, 2016
+//
 public class PikachuArt {
 
 	public static void main(String[] args) {
