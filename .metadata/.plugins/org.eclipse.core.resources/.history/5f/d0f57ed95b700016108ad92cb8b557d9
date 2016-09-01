@@ -30,9 +30,6 @@ public class DoMath {
 		
 		double radians = Calculate.toRadians(134.98);
 		System.out.println(radians);
-		
-		double discriminant = Calculate.discriminant(1.0, 2.0, 3.0);
-		System.out.println(discriminant);
 	}
 	
 

@@ -1,0 +1,25 @@
+/**
+ * 
+ */
+
+/**
+ * @author Samantha Chow
+ *
+ */
+public class DoMath {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		double square = Calculate.square(5.0);
+		System.out.println(square);
+		
+		double cube = Calculate.cube(3.0);
+		System.out.println(cube);
+		
+	}
+	
+
+}

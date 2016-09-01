@@ -34,9 +34,4 @@ public class Calculate {
 		answer = (num*(3.14159/180));
 		return answer;
 	}
-	public static double discriminant(double a, double b, double c){
-		double answer;
-		answer = ((b*b)-(4*a*c));
-		return answer;
-	}
 }

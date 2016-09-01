@@ -1,0 +1,22 @@
+/**
+ * @author Samantha Chow
+ *
+ */
+public class Calculate {
+
+	public static double square(double num){
+		double answer;
+		answer = (num*num);
+		return answer;
+	}
+	public static double cube(double num){
+		double answer;
+		answer = (num*num*num);
+		return answer;
+	}
+	public static double average(double num, double num){
+		double answer;
+		answer = ((num*num)/2);
+		return answer;
+	}
+}
