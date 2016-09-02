@@ -3,7 +3,8 @@
  *
  */
 public class Calculate {
-
+	
+//part 1
 	public static double square(double num){
 		double answer;
 		answer = (num*num);
@@ -39,4 +40,59 @@ public class Calculate {
 		answer = ((b*b)-(4*a*c));
 		return answer;
 	}
+//	public static String toImproperFrac(int i, int j, int k){
+//		int ik = i*k;
+//		int numerator = ik + j;
+//		String div = "/";
+//		return numerator + div + k;
+//	}
+//	public static String toMixedNum(int x, int y){
+//		int wholeNum;
+//		wholeNum = x / y;
+//		int xModY = x % y;
+//		return wholeNum + "_" + xModY + "/" + y;
+//	}
+//	public static String foil(int a, int b, int c, int d, String x){
+//		int first = "(a*b)" + x;
+//		int second = 
+//	int third = 
+//	}
+//part 2
+//	public static boolean isDivisibleBy(int x, int y){
+//		if (x % y == 0){
+//			return true;
+//	}
+	public static double absValue(double num){
+		if (num > 0){
+			return num;
+		}else{
+			return -(num);
+		}
+	}
+	public static int max(int x, int y){
+		if (x > y){
+			return x;
+		}else{
+			return y;
+		}
+	}
+	public static double max(double a, double b, double c){
+		if (a> b && c){
+			return a;
+		}else if (b > a && c){
+			return b;
+		}else{
+			return c;
+		}
+	}
+	public static int min(int x, int y){
+		if (x < y){
+			return x;
+		}else{
+			return y;
+		}
+	}
+//	public static double round2(double num){
+//		
+//	}
 }

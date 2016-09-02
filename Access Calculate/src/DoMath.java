@@ -13,6 +13,7 @@ public class DoMath {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+//part 1
 		double square = Calculate.square(5.0);
 		System.out.println(square);
 		
@@ -33,6 +34,20 @@ public class DoMath {
 		
 		double discriminant = Calculate.discriminant(1.0, 2.0, 3.0);
 		System.out.println(discriminant);
+		
+//		int improperFrac = Calculate.toImproperFrac(3, 1, 2);
+//		System.out.println(improperFrac);
+//		
+//		String mixedNum = Calculate.toMixedNum(7,2);
+//		System.out.println(mixedNum);
+		
+//part 2
+//		boolean divisible = Calculate.isDivisibleBy(10, 2);
+//		System.out.println(divisible);
+		
+//		double abValue = Calculate.absValue(4.0);
+//		System.out.println(abValue);
+		
 	}
 	
 
