@@ -84,13 +84,13 @@ public class Calculate {
 			return c;
 		}
 	}
-	public static int min(int x, int y){
-		if (x < y){
-			return x;
-		}else{
-			return y;
-		}
-	}
+//	public static int min(int x, int y){
+//		if (x < y){
+//			return x;
+//		}else{
+//			return y;
+//		}
+//	}
 //	public static double round2(double num){
 //		
 //	}

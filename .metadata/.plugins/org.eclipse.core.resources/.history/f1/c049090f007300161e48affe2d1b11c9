@@ -14,8 +14,8 @@ public class DoMath {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 //part 1
-		double square = Calculate.square(5.0);
-		System.out.println(square);
+//		double square = Calculate.square(5.0);
+//		System.out.println(square);
 		
 		double cube = Calculate.cube(3.0);
 		System.out.println(cube);
@@ -42,20 +42,12 @@ public class DoMath {
 		System.out.println(mixedNum);
 		
 //part 2
-//		boolean divisible = Calculate.isDivisibleBy(10, 2);
-//		System.out.println(divisible);
+		boolean divisible = Calculate.isDivisibleBy(10, 2);
+		System.out.println(divisible);
 		
-		double absValue = Calculate.absValue(-4.0);
-		System.out.println(absValue);
+//		double abValue = Calculate.absValue(4.0);
+//		System.out.println(abValue);
 		
-		int maximum = Calculate.max(10, 5);
-		System.out.println(maximum);
-		
-		double maximumNum = Calculate.max(12.0, 30.5, 202.4);
-		System.out.println(maximumNum);
-		
-		int minimum = Calculate.min(12, 2);
-		System.out.println(minimum);
 	}
 	
 

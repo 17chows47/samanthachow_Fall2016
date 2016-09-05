@@ -55,7 +55,7 @@ public class DoMath {
 		System.out.println(maximumNum);
 		
 		int minimum = Calculate.min(12, 2);
-		System.out.println(minimum);
+		System.out.println(minumum);
 	}
 	
 

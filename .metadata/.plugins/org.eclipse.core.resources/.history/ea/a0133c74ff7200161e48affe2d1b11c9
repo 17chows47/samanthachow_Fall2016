@@ -40,17 +40,18 @@ public class Calculate {
 		answer = ((b*b)-(4*a*c));
 		return answer;
 	}
-	public static String toImproperFrac(int i, int j, int k){
-		int ik = i*k;
-		int numerator = ik + j;
-		return numerator + "/" + k;
-	}
-	public static String toMixedNum(int x, int y){
-		int wholeNum;
-		wholeNum = x / y;
-		int xModY = x % y;
-		return wholeNum + "_" + xModY + "/" + y;
-	}
+//	public static String toImproperFrac(int i, int j, int k){
+//		int ik = i*k;
+//		int numerator = ik + j;
+//		String div = "/";
+//		return numerator + div + k;
+//	}
+//	public static String toMixedNum(int x, int y){
+//		int wholeNum;
+//		wholeNum = x / y;
+//		int xModY = x % y;
+//		return wholeNum + "_" + xModY + "/" + y;
+//	}
 //	public static String foil(int a, int b, int c, int d, String x){
 //		int first = "(a*b)" + x;
 //		int second = 
@@ -76,9 +77,9 @@ public class Calculate {
 		}
 	}
 	public static double max(double a, double b, double c){
-		if (a > b && a > c){
+		if (a> b && c){
 			return a;
-		}else if (b > a && b > c){
+		}else if (b > a && c){
 			return b;
 		}else{
 			return c;

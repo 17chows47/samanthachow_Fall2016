@@ -75,22 +75,22 @@ public class Calculate {
 			return y;
 		}
 	}
-	public static double max(double a, double b, double c){
-		if (a > b && a > c){
-			return a;
-		}else if (b > a && b > c){
-			return b;
-		}else{
-			return c;
-		}
-	}
-	public static int min(int x, int y){
-		if (x < y){
-			return x;
-		}else{
-			return y;
-		}
-	}
+//	public static double max(double a, double b, double c){
+//		if (a> b && c){
+//			return a;
+//		}else if (b > a && c){
+//			return b;
+//		}else{
+//			return c;
+//		}
+//	}
+//	public static int min(int x, int y){
+//		if (x < y){
+//			return x;
+//		}else{
+//			return y;
+//		}
+//	}
 //	public static double round2(double num){
 //		
 //	}
