@@ -42,8 +42,8 @@ public class DoMath {
 		System.out.println(mixedNum);
 		
 //part 2
-//		boolean divisible = Calculate.isDivisibleBy(10, 2);
-//		System.out.println(divisible);
+		boolean divisible = Calculate.isDivisibleBy(10, 2);
+		System.out.println(divisible);
 		
 		double absValue = Calculate.absValue(-4.0);
 		System.out.println(absValue);
@@ -56,6 +56,10 @@ public class DoMath {
 		
 		int minimum = Calculate.min(12, 2);
 		System.out.println(minimum);
+		
+		double rounded = Calculate.round2(32.6768);
+		System.out.println(rounded);
+		
 	}
 	
 

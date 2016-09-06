@@ -57,10 +57,13 @@ public class Calculate {
 //	int third = 
 //	}
 //part 2
-//	public static boolean isDivisibleBy(int x, int y){
-//		if (x % y == 0){
-//			return true;
-//	}
+	public static boolean isDivisibleBy(int x, int y){
+		if (x % y == 0){
+			return true;
+		}else{
+			return false;
+		}
+	}
 	public static double absValue(double num){
 		if (num > 0){
 			return num;
@@ -91,7 +94,16 @@ public class Calculate {
 			return y;
 		}
 	}
-//	public static double round2(double num){
+
+	public static double round2(double num){
+		num = (num + 0.005);
+		num = (num * 100.0);
+		num = (int) num;
+		num = (num / 100);
+		return num;
+	}
+//part 3
+//	public static double exponent(double base, int power){
 //		
 //	}
 }
