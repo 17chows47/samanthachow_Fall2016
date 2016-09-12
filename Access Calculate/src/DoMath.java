@@ -60,6 +60,8 @@ public class DoMath {
 		double rounded = Calculate.round2(32.6768);
 		System.out.println(rounded);
 		
+//part 3
+		
 	}
 	
 
