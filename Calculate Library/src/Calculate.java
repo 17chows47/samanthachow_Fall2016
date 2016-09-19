@@ -114,8 +114,7 @@ public class Calculate {
         }
         return base;
     }
-	public static int factorial(int num) {
-		if(num < 0) throw new illegalArgumentException("Cannot determine a factorial of a negative number. Please input a positive number");
+	public static int factorial(int num){
         int start = 1; 
         for (int i = 1; i <= num; i++) {
             start *= i;
@@ -123,15 +122,14 @@ public class Calculate {
         return start;
     }
 	
-//	public static boolean isPrime(int num){
-//		for (int i = 2; i<= num; i++){
-//			if(Calculate.isDivisibleBy(num)){
-//				
-//			}
-//		}
-//	
-//	}
+	public static boolean isPrime(int num){
+		for (int i = 2; i<= num; i++){
+			if(Calculate.isDivisibleBy(num, i) == true){
+				return false;
+			}
+		}
 	
+	}
 	
 //	public static int gcf(int a, int b)
 //    {
@@ -147,4 +145,6 @@ public class Calculate {
 //        if(a == 0) return b;
 //        else return a;
 //    }
+	
+	public static double sqrt()
 }

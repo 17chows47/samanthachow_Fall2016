@@ -67,8 +67,11 @@ public class DoMath {
 		double exponential = Calculate.exponent(2.0, 3);
         System.out.println(exponential);
         
-        int factorial = Calculate.factorial(-3);
+        int factorial = Calculate.factorial(3);
         System.out.println(factorial);
+        
+        boolean primeNum = Calculate.isPrime(7);
+        System.out.println(primeNum);
         
 //        int gcfactor = Calculate.gcf(32, 8);
 //        System.out.println(gcfactor);

@@ -51,16 +51,23 @@ public class Calculate {
 		int xModY = x % y;
 		return wholeNum + "_" + xModY + "/" + y;
 	}
-//	public static String foil(int a, int b, int c, int d, String x){
-//		int first = "(a*b)" + x;
-//		int second = 
-//	int third = 
-//	}
+	public static String foil(int a, int b, int c, int d, String x){
+		int first = (a*c); 
+		int second = (a*d);
+		int third = (b*c);
+		int fourth = (b*d);
+		int secondCoeff = second + third;
+		x = (first + "n^2" + " + " + secondCoeff + "n + " + fourth);
+		return x;
+	}
 //part 2
-//	public static boolean isDivisibleBy(int x, int y){
-//		if (x % y == 0){
-//			return true;
-//	}
+	public static boolean isDivisibleBy(int x, int y){
+		if (x % y == 0){
+			return true;
+		}else{
+			return false;
+		}
+	}
 	public static double absValue(double num){
 		if (num > 0){
 			return num;
@@ -91,10 +98,7 @@ public class Calculate {
 			return y;
 		}
 	}
-	//+0.005
-	//x100 3267.268
-	//int 3267
-	// /100 32.67
+
 	public static double round2(double num){
 		num = (num + 0.005);
 		num = (num * 100.0);
@@ -102,4 +106,44 @@ public class Calculate {
 		num = (num / 100);
 		return num;
 	}
+//part 3
+	public static double exponent(double base, int exp){
+        double start = base;
+        for (int i = 1; i < exp; i++){
+            base *= start;
+        }
+        return base;
+    }
+	public static int factorial(int num) {
+		if(num < 0) throw new illegalArgumentException("Cannot determine a factorial of a negative number. Please input a positive number");
+        int start = 1; 
+        for (int i = 1; i <= num; i++) {
+            start *= i;
+        }
+        return start;
+    }
+	
+//	public static boolean isPrime(int num){
+//		for (int i = 2; i<= num; i++){
+//			if(Calculate.isDivisibleBy(num)){
+//				
+//			}
+//		}
+//	
+//	}
+	
+//	public static int gcf(int a, int b)
+//    {
+//        while (a != 0 && b != 0)
+//        {
+//            if (a >= b)
+//            {
+//                a = a - b;
+//            }
+//            else
+//                b = b - a;
+//        }
+//        if(a == 0) return b;
+//        else return a;
+//    }
 }

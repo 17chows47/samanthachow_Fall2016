@@ -41,9 +41,12 @@ public class DoMath {
 		String mixedNum = Calculate.toMixedNum(7,2);
 		System.out.println(mixedNum);
 		
+		String foiled = Calculate.foil(2, 3, 6, -7, "n");
+		System.out.println(foiled);
+		
 //part 2
-//		boolean divisible = Calculate.isDivisibleBy(10, 2);
-//		System.out.println(divisible);
+		boolean divisible = Calculate.isDivisibleBy(10, 2);
+		System.out.println(divisible);
 		
 		double absValue = Calculate.absValue(-4.0);
 		System.out.println(absValue);
@@ -57,9 +60,21 @@ public class DoMath {
 		int minimum = Calculate.min(12, 2);
 		System.out.println(minimum);
 		
-		double rounded = Calculate.round2(32.67268);
+		double rounded = Calculate.round2(32.6768);
 		System.out.println(rounded);
 		
+//part 3
+		double exponential = Calculate.exponent(2.0, 3);
+        System.out.println(exponential);
+        
+        int factorial = Calculate.factorial(3);
+        System.out.println(factorial);
+        
+        boolean primeNum = Calculate.isPrime(7);
+        System.out.println(primeNum);
+        
+//        int gcfactor = Calculate.gcf(32, 8);
+//        System.out.println(gcfactor);
 	}
 	
 
