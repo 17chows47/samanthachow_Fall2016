@@ -25,14 +25,14 @@ public class Calculate {
 		answer = ((i+j+k)/3);
 		return answer;
 	}
-	public static double toDegrees(double num){
+	public static double toDegrees(double radians){
 		double answer;
-		answer = (num*(180/3.14159));
+		answer = (radians*(180/3.14159));
 		return answer;
 	}
-	public static double toRadians(double num){
+	public static double toRadians(double degrees){
 		double answer;
-		answer = (num*(3.14159/180));
+		answer = (degrees*(3.14159/180));
 		return answer;
 	}
 	public static double discriminant(double a, double b, double c){
@@ -61,8 +61,8 @@ public class Calculate {
 		return x;
 	}
 //part 2
-	public static boolean isDivisibleBy(int x, int y){
-		if (x % y == 0){
+	public static boolean isDivisibleBy(int dividend, int divisor){
+		if (dividend % divisor == 0){
 			return true;
 		}else{
 			return false;
@@ -123,28 +123,28 @@ public class Calculate {
     }
 	
 	public static boolean isPrime(int num){
-		for (int i = 2; i<= num; i++){
+		for (int i = 2; i< num; i++){
 			if(Calculate.isDivisibleBy(num, i) == true){
 				return false;
+			}else{
+				return true;
 			}
 		}
 	
 	}
 	
-//	public static int gcf(int a, int b)
-//    {
-//        while (a != 0 && b != 0)
-//        {
-//            if (a >= b)
-//            {
-//                a = a - b;
-//            }
-//            else
-//                b = b - a;
-//        }
-//        if(a == 0) return b;
-//        else return a;
-//    }
+	public static int gcf(int a, int b)
+    {
+        while (a != 0 && b != 0){
+        	if (Calculate.isDivisibleBy(a,b) == true){
+        		for (int i = 1; i < b; i++){
+        			
+        		}
+        	}else if (Calculate.isDivisibleBy(b,a) == true){
+        		
+        	}
+        }
+    }
 	
-	public static double sqrt()
+	//public static double sqrt()
 }
