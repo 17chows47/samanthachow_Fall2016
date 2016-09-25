@@ -1,0 +1,150 @@
+/**
+ * @author Samantha Chow
+ *
+ */
+public class Calculate {
+	
+//part 1
+	public static double square(double num){
+		double answer;
+		answer = (num*num);
+		return answer;
+	}
+	public static double cube(double num){
+		double answer;
+		answer = (num*num*num);
+		return answer;
+	}
+	public static double average(double num1, double num2){
+		double answer;
+		answer = ((num1+num2)/2);
+		return answer;
+	}
+	public static double average(double num1, double num2, double num3){
+		double answer;
+		answer = ((num1+num2+num3)/3);
+		return answer;
+	}
+	public static double toDegrees(double radians){
+		double answer;
+		answer = (radians*(180/3.14159));
+		return answer;
+	}
+	public static double toRadians(double degrees){
+		double answer;
+		answer = (degrees*(3.14159/180));
+		return answer;
+	}
+	public static double discriminant(double a, double b, double c){
+		double answer;
+		answer = ((b*b)-(4*a*c));
+		return answer;
+	}
+	public static String toImproperFrac(int i, int j, int k){
+		int ik = i*k;
+		int numerator = ik + j;
+		return numerator + "/" + k;
+	}
+	public static String toMixedNum(int numerator, int denominator){
+		int wholeNum;
+		wholeNum = numerator / denominator;
+		int xModY = numerator % denominator;
+		return wholeNum + "_" + xModY + "/" + y;
+	}
+	public static String foil(int a, int b, int c, int d, String x){
+		int first = (a*c); 
+		int second = (a*d);
+		int third = (b*c);
+		int fourth = (b*d);
+		int secondCoeff = second + third;
+		x = (first + "n^2" + " + " + secondCoeff + "n + " + fourth);
+		return x;
+	}
+//part 2
+	public static boolean isDivisibleBy(int dividend, int divisor){
+		if (dividend % divisor == 0){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public static double absValue(double num){
+		if (num > 0){
+			return num;
+		}else{
+			return -(num);
+		}
+	}
+	public static int max(int num1, int num2){
+		if (num1 > num2){
+			return num1;
+		}else{
+			return num2;
+		}
+	}
+	public static double max(double num1, double num2, double num3){
+		if (mnum1 > num2 && num1 > num3){
+			return num1;
+		}else if (num2 > num1 && num2 > num3){
+			return num2;
+		}else{
+			return num3;
+		}
+	}
+	public static int min(int num1, int num2){
+		if (num1 < num2){
+			return num1;
+		}else{
+			return num2;
+		}
+	}
+
+	public static double round2(double num){
+		num = (num + 0.005);
+		num = (num * 100.0);
+		num = (int) num;
+		num = (num / 100);
+		return num;
+	}
+//part 3
+	public static double exponent(double base, int exp){
+        double start = base;
+        for (int i = 1; i < exp; i++){
+            base *= start;
+        }
+        return base;
+    }
+	public static int factorial(int num){
+        int start = 1; 
+        for (int i = 1; i <= num; i++) {
+            start *= i;
+        }
+        return start;
+    }
+	
+//	public static boolean isPrime(int num){
+//		for (int i = 2; i< num; i++){
+//			if(Calculate.isDivisibleBy(num, i) == true){
+//				return false;
+//			}else{
+//				return true;
+//			}
+//		}
+//	
+//	}
+//	
+//	public static int gcf(int a, int b)
+//    {
+//        while (a != 0 && b != 0){
+//        	if (Calculate.isDivisibleBy(a,b) == true){
+//        		for (int i = 1; i < b; i++){
+//        			
+//        		}
+//        	}else if (Calculate.isDivisibleBy(b,a) == true){
+//        		
+//        	}
+//        }
+//    }
+	
+	//public static double sqrt()
+}
