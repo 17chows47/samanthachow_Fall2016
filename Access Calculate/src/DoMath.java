@@ -1,7 +1,3 @@
-/**
- * 
- */
-
 /**Samantha Chow
  * APCS 1
  * 9/24/16
