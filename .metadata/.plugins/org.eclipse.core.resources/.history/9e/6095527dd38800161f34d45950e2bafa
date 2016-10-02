@@ -24,8 +24,7 @@ public class ProcsessingNumbers {
 			nextNum = userInput.nextInt();
 			if(nextNum > max){
 				max = nextNum;
-			}
-			if (nextNum < min){
+			}else if (nextNum < min){
 				min = nextNum;
 			}
 			if(nextNum % 2 == 0){

@@ -1,31 +1,26 @@
 import java.util.*;
 
 /**
- *Samantha Chow
- *10/2/16
- *APCS1
- *Processing Numbers Pair Programming
+ * @author Samantha Chow
  *
- *This method accepts a user input of the number of numbers to take into account, then determines
- *the maximum number, minimum number, and the sum of all the even numbers received. 
  */
 public class ProcsessingNumbers {
-	
+
 	public static void main(String[] args) {
 		Scanner userInput = new Scanner(System.in);
 		int nextNum;
 		int total = 0;
-		int min = 1000000000;
+		int min;
 		int max = 0;
 		System.out.println("How many numbers do you want to input?");
 		int loopTimes = userInput.nextInt();
 		for(int i = 1; i <= loopTimes; i++){
 			System.out.println("Enter a number: ");
 			nextNum = userInput.nextInt();
+			min = nextNum;
 			if(nextNum > max){
 				max = nextNum;
-			}
-			if (nextNum < min){
+			}else if (nextNum < min){
 				min = nextNum;
 			}
 			if(nextNum % 2 == 0){
