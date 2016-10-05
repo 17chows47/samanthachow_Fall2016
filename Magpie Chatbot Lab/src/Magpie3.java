@@ -28,7 +28,7 @@ public class Magpie3 {
 		String response = "";
 		if (statement.trim().length() == 0){
 			response = "Please say something!";
-		}else if (statement.indexOf("no") >= 0) {
+		}else if (Magpie3.findKeyword(statement, "no") >= 0) {
 			response = "Why so negative?";
 		} else if (statement.indexOf("mother") >= 0
 				|| statement.indexOf("father") >= 0

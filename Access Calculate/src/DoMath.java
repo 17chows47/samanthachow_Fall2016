@@ -75,6 +75,9 @@ public class DoMath {
         
         double squareRoot = Calculate.sqrt(4.0);
         System.out.println(squareRoot);
+        
+//part 4 
+        String quadraticFormula = Calculate.quadForm(2, 6, 3);
+        System.out.println(quadraticFormula);
 	}
-	
 }

@@ -6,8 +6,7 @@
  * This class is a Math Library that contains the formulas (written as methods) for a number 
  * of different basic and complex math equations. 
  */
-public class Calculate {
-	
+public class Calculate {	
 //part 1
 	//Accepts a double and returns the square of that number as a double.
 	public static double square(double num){
@@ -200,14 +199,22 @@ public class Calculate {
 		}
 	}
 //part 4
+	//Accepts 3 coefficients as integers and returns the roots of implementing the quadratic formula on the expression.
 	public static String quadForm(int coeff1, int coeff2, int coeff3){
 		double discriminant = Calculate.discriminant(coeff1, coeff2, coeff3);
 		if(discriminant < 0){
-			return "no real roots";
+			throw new IllegalArgumentException("no real roots");
+		}else if (discriminant == 0){
+			String root = Calculate.round2(-coeff2 /(2*coeff1)) + " " ;
+			return root;
+		}else{
+			double root1 = Calculate.round2(((-coeff2 + Calculate.sqrt(discriminant)))/(2*coeff1));
+			double root2 = Calculate.round2(((-coeff2 - Calculate.sqrt(discriminant)))/(2*coeff1));
+			if (root1 > root1){
+				return root1 + " and " + root2;
+			}else{
+				return root2 + " and " + root1;
+			}
 		}
-		double numerator = (-coeff2 + (Calculate.sqrt(discriminant)));
-		double denominator = (2*coeff1);
-		double squareRoot = numerator / denominator;
-		
 	}
 }
