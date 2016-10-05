@@ -8,6 +8,8 @@ import java.util.*;
  *
  *This method accepts a user input of the number of numbers to take into account, then determines
  *the maximum number, minimum number, and the sum of all the even numbers received. 
+ *Partner 1: Samantha Chow
+ *Partner 2: Patrick Tan
  */
 public class ProcsessingNumbers {
 	

@@ -181,7 +181,7 @@ public class Calculate {
         while(num1 != 0 && num2 != 0){
         	int factor = num2;
         	num2 = num1 % num2;
-        	num1= factor;
+        	num1 = factor;
         }
         int gcf = num1+num2;
         if (gcf <=0){
@@ -196,7 +196,18 @@ public class Calculate {
 		if(num < 0){
 			throw new IllegalArgumentException("Cannot square root a negative number.");
 		}else{
-			return sqrt;
+			return Calculate.round2(sqrt);
 		}
+	}
+//part 4
+	public static String quadForm(int coeff1, int coeff2, int coeff3){
+		double discriminant = Calculate.discriminant(coeff1, coeff2, coeff3);
+		if(discriminant < 0){
+			return "no real roots";
+		}
+		double numerator = (-coeff2 + (Calculate.sqrt(discriminant)));
+		double denominator = (2*coeff1);
+		double squareRoot = numerator / denominator;
+		
 	}
 }
