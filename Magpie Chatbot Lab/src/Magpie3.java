@@ -28,29 +28,27 @@ public class Magpie3 {
 		String response = "";
 		if (statement.trim().length() == 0){
 			response = "Please say something!";
-		}else if (Magpie3.findKeyword(statement, "no") >= 0) {
+		}else if (findKeyword(statement, "no") >= 0) {
 			response = "Why so negative?";
-		} else if (statement.indexOf("mother") >= 0
-				|| statement.indexOf("father") >= 0
-				|| statement.indexOf("sister") >= 0
-				|| statement.indexOf("brother") >= 0) {
+		} else if (findKeyword(statement, "mother") >= 0
+				|| findKeyword(statement, "father") >= 0
+				|| findKeyword(statement, "sister") >= 0
+				|| findKeyword(statement, "brother") >= 0) {
 			response = "Tell me more about your family.";
-		} else {
-			response = getRandomResponse();
-		}
-		if(statement.indexOf("Mr.") >= 0){
+		}else if(findKeyword(statement, "Mr.") >= 0){
 			response = "He sounds like a good teacher.";
-		}else if(statement.indexOf("Ms.") >= 0){
+		}else if(findKeyword(statement, "Ms.") >= 0){
 			response = "She sounds like a good teacher.";
-		}
-		if (statement.indexOf("hello") >= 0){
+		}else if (findKeyword(statement, "hello") >= 0){
 			response = "Hello, how are you?";
-		}else if(statement.indexOf("goodmorning") >= 0){
+		}else if(findKeyword(statement, "goodmorning") >= 0){
 			response = "It's too early...I'm tired";
-		}else if(statement.indexOf("good afternoon") >= 0){
+		}else if(findKeyword(statement, "good afternoon") >= 0){
 			response = "Time to take a nap!";	
-		}else if(statement.indexOf("goodnight") >= 0){
+		}else if(findKeyword(statement, "goodnight") >= 0){
 			response = "Goodnight, talk to you tomorrow!";
+		}else{
+			response = getRandomResponse();
 		}
 		return response;
 		
@@ -132,7 +130,7 @@ public class Magpie3 {
 		if (whichResponse == 0) {
 			response = "That's interesting!";
 		} else if (whichResponse == 1) {
-			response = "Hmmm.";
+			response = "Hmmm?";
 		} else if (whichResponse == 2) {
 			response = "Do you really think so?";
 		} else if (whichResponse == 3) {
@@ -145,5 +143,4 @@ public class Magpie3 {
 		return response;
 	}
 		
-
 }
