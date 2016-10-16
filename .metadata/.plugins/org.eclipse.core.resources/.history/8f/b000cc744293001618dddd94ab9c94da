@@ -11,6 +11,8 @@ public class Magpie4 {
 	 * response based on the rules given
 	 */
 	public String getResponse(String statement) {
+		// Paste Part 3 code here.  The method has new pieces that continue below and should flow from your previous code.
+
 		String response = "";
 		if (statement.trim().length() == 0){
 			response = "Please say something!";

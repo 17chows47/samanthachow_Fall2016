@@ -4,13 +4,27 @@ public class Magpie4 {
 	public String getGreeting() {
 		return "Hello, let's talk.";
 	}
-		
+
+
+	/*
+	 * 1) Copy and paste the code you wrote in Magpie 3 into the getResponse method. There is new code within the method 
+	 * but below where you will paste your code.  Figure out what it does.
+	 * 
+	 * 2) Copy and paste Part 3's getRandomResponse() code into the method below.
+	 * 
+	 * 3) Alter the class as described in the handout.
+	 * 
+	 */
+	
+	
 	/**
 	 * Gives a response to a user statement
 	 * takes in user statement
 	 * response based on the rules given
 	 */
 	public String getResponse(String statement) {
+		// Paste Part 3 code here.  The method has new pieces that continue below and should flow from your previous code.
+
 		String response = "";
 		if (statement.trim().length() == 0){
 			response = "Please say something!";
@@ -38,7 +52,8 @@ public class Magpie4 {
 		}else if (findKeyword(statement, "I want", 0) >= 0){
 			response = transformIWantStatement(statement);
 		}else{
-			// Look for a two word (you <something> me) pattern
+			// Look for a two word (you <something> me)
+			// pattern
 			int psn = findKeyword(statement, "you", 0);
 
 			if (psn >= 0 && findKeyword(statement, "me", psn) >= 0) {
@@ -180,6 +195,7 @@ public class Magpie4 {
 			// The last position didn't work, so let's find the next, if there
 			// is one.
 			psn = phrase.indexOf(goal.toLowerCase(), psn + 1);
+
 		}
 
 		return -1;
@@ -204,7 +220,9 @@ public class Magpie4 {
 	 * 
 	 * @return a non-committal string
 	 */
-	private String getRandomResponse() {	
+	private String getRandomResponse() {
+		
+		// Paste part 3 code here	
 		final int NUMBER_OF_RESPONSES = 6;
 		double r = Math.random();
 		int whichResponse = (int) (r * NUMBER_OF_RESPONSES);
@@ -225,5 +243,6 @@ public class Magpie4 {
 		}
 		return response;
 	}
+
 }
 
