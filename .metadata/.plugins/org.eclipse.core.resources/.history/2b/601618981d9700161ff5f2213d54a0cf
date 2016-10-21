@@ -38,7 +38,7 @@ public class DoMath {
 		String mixedNum = Calculate.toMixedNum(-9,3);
 		System.out.println(mixedNum);
 		
-		String foiled = Calculate.foil(2, -3, -6, 7, "n");
+		String foiled = Calculate.foil(2, 3, -6, 7, "n");
 		System.out.println(foiled);
 		
 //part 2

@@ -81,18 +81,7 @@ public class Calculate {
 		int third = (b*c);
 		int fourth = (b*d);
 		int secondCoeff = second + third;
-		if (secondCoeff > 0 && fourth > 0){
-			x = (first + "n^2 + " + secondCoeff + "n + " + fourth);
-		}
-		if (secondCoeff < 0 && fourth < 0){
-			x = (first + "n^2 " + secondCoeff + "n " + fourth);
-		}
-		if (secondCoeff > 0 && fourth < 0){
-			x = (first + "n^2 + " + secondCoeff + "n " + fourth);
-		}
-		if (secondCoeff < 0 && fourth > 0){
-			x = (first + "n^2 " + secondCoeff + "n + " + fourth);
-		}
+		x = (first + "n^2 " + secondCoeff + "n " + fourth);
 		return x;
 	}
 //part 2

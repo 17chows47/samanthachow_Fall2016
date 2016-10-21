@@ -81,19 +81,11 @@ public class Calculate {
 		int third = (b*c);
 		int fourth = (b*d);
 		int secondCoeff = second + third;
-		if (secondCoeff > 0 && fourth > 0){
+		if (a > 0 && b > 0 && c > 0 && d > 0){
 			x = (first + "n^2 + " + secondCoeff + "n + " + fourth);
+			return x;
 		}
-		if (secondCoeff < 0 && fourth < 0){
-			x = (first + "n^2 " + secondCoeff + "n " + fourth);
-		}
-		if (secondCoeff > 0 && fourth < 0){
-			x = (first + "n^2 + " + secondCoeff + "n " + fourth);
-		}
-		if (secondCoeff < 0 && fourth > 0){
-			x = (first + "n^2 " + secondCoeff + "n + " + fourth);
-		}
-		return x;
+		
 	}
 //part 2
 	//Accepts two integers and determines whether they are divisible by each other and returns a boolean.

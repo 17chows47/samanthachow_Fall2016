@@ -67,11 +67,7 @@ public class Calculate {
 			int wholeNum;
 			wholeNum = numerator / denominator;
 			int xModY = numerator % denominator;
-			if (xModY == 0){
-				return wholeNum + " ";
-			}else{
-				return wholeNum + "_" + xModY + "/" + denominator;
-			}
+			return wholeNum + "_" + xModY + "/" + denominator;
 		}
 	}
 	//Accepts four integers and a String to foil the input and return the foiled function as a String.
@@ -81,18 +77,7 @@ public class Calculate {
 		int third = (b*c);
 		int fourth = (b*d);
 		int secondCoeff = second + third;
-		if (secondCoeff > 0 && fourth > 0){
-			x = (first + "n^2 + " + secondCoeff + "n + " + fourth);
-		}
-		if (secondCoeff < 0 && fourth < 0){
-			x = (first + "n^2 " + secondCoeff + "n " + fourth);
-		}
-		if (secondCoeff > 0 && fourth < 0){
-			x = (first + "n^2 + " + secondCoeff + "n " + fourth);
-		}
-		if (secondCoeff < 0 && fourth > 0){
-			x = (first + "n^2 " + secondCoeff + "n + " + fourth);
-		}
+		x = (first + "n^2" + " + " + secondCoeff + "n + " + fourth);
 		return x;
 	}
 //part 2

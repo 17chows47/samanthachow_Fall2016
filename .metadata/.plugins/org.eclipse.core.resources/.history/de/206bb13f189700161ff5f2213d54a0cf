@@ -67,11 +67,7 @@ public class Calculate {
 			int wholeNum;
 			wholeNum = numerator / denominator;
 			int xModY = numerator % denominator;
-			if (xModY == 0){
-				return wholeNum + " ";
-			}else{
-				return wholeNum + "_" + xModY + "/" + denominator;
-			}
+			return wholeNum + "_" + xModY + "/" + denominator;
 		}
 	}
 	//Accepts four integers and a String to foil the input and return the foiled function as a String.
@@ -81,18 +77,7 @@ public class Calculate {
 		int third = (b*c);
 		int fourth = (b*d);
 		int secondCoeff = second + third;
-		if (secondCoeff > 0 && fourth > 0){
-			x = (first + "n^2 + " + secondCoeff + "n + " + fourth);
-		}
-		if (secondCoeff < 0 && fourth < 0){
-			x = (first + "n^2 " + secondCoeff + "n " + fourth);
-		}
-		if (secondCoeff > 0 && fourth < 0){
-			x = (first + "n^2 + " + secondCoeff + "n " + fourth);
-		}
-		if (secondCoeff < 0 && fourth > 0){
-			x = (first + "n^2 " + secondCoeff + "n + " + fourth);
-		}
+		x = (first + "n^2" + " + " + secondCoeff + "n + " + fourth);
 		return x;
 	}
 //part 2
@@ -198,13 +183,12 @@ public class Calculate {
         	num1 = factor;
         }
         int gcf = num1+num2;
-        if (gcf <= 0){
+        if (gcf <=0){
         	throw new IllegalArgumentException("GCF cannot equal 0");
         }else{
         	return gcf;
         }
     }
-	
 	//Accepts a double and returns the square root of that number as a double. 
 	public static double sqrt(double num){
 		double sqrt = round2(Math.sqrt(num));

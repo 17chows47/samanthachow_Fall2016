@@ -3,6 +3,7 @@ public class Split
 
 	public static void main(String[] args) 
 	{
+		System.out.println("I really like apples!".split("really"));
 		//String.split();
 		//It's a method that acts on a string, <StringName>.split(<String sp>);
 		//Where sp is the string where the string splits
