@@ -50,21 +50,13 @@ public class Split
 		 *  else if true test if anything inside bread 
 		 *  else test whats inside
 		 */
-		insideSandwich("breadeverythingelsebreadcheese");
+		insideSandwich("breadcheesecheesetomatotomatotomatochickenhummusbread");
 	}
 		
 		public static void insideSandwich(String sandwich){	
-			// no bread = not a sandwich
-			if(sandwich.indexOf("bread") < 0){
-				System.out.println("Not a Sandwich");
-			}
-			// one bread = not a sandwich
-			String bread = sandwich.substring(sandwich.indexOf("bread")+5);	 //location of bread
-			if(bread.indexOf("bread") < 0){
-				System.out.println("Not a Sandwich");
-			}else{
-			String stuffNotBread [] = sandwich.split("bread");
-			System.out.println(Arrays.toString(stuffNotBread));
+			if(sandwich.indexOf("bread") > 0){
+				String bread = sandwich.substring(sandwich.indexOf("bread")+5);	
+				//if(bread )
 			}
 		}
 		
@@ -77,6 +69,7 @@ public class Split
 
 		
 
+	}
 
 }
 

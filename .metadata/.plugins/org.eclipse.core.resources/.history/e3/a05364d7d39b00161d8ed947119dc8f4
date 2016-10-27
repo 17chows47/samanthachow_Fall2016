@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Split
+public class Split 
 {
 
 	
@@ -45,28 +45,53 @@ public class Split
 		 * x bread y bread z = Y
 		 * x bread y bread =  Y
 		 * 
-		 
 		 * if test more than one bread
 		 *  else if true test if anything inside bread 
 		 *  else test whats inside
 		 */
-		insideSandwich("breadeverythingelsebreadcheese");
-	}
+		//breadcheesecheesetomatotomatotomatochickenhummusbread
 		
-		public static void insideSandwich(String sandwich){	
-			// no bread = not a sandwich
-			if(sandwich.indexOf("bread") < 0){
-				System.out.println("Not a Sandwich");
-			}
-			// one bread = not a sandwich
-			String bread = sandwich.substring(sandwich.indexOf("bread")+5);	 //location of bread
-			if(bread.indexOf("bread") < 0){
-				System.out.println("Not a Sandwich");
-			}else{
-			String stuffNotBread [] = sandwich.split("bread");
-			System.out.println(Arrays.toString(stuffNotBread));
+		public static void insideBread(String sandwich, String bread){
+			if(findKeyword((String sandwich, String bread) > = 0){
+				
+				Arrays.toString(sandwich);
+				if()
 			}
 		}
+		10.78
+		private int findKeyword(String statement, String goal) {
+			return findKeyword(statement, goal, 0);
+		}
+		
+		private int findKeyword(String statement, String goal, int startPos) {
+			String phrase = statement.trim();
+			// The only change to incorporate the startPos is in the line below
+			int psn = phrase.toLowerCase().indexOf(goal.toLowerCase(), startPos);
+
+			// Refinement--make sure the goal isn't part of a word
+			while (psn >= 0) {
+				// Find the string of length 1 before and after the word
+				String before = " ", after = " ";
+				if (psn > 0) {
+					before = phrase.substring(psn - 1, psn).toLowerCase();
+				}
+				if (psn + goal.length() < phrase.length()) {
+					after = phrase.substring(psn + goal.length(),
+							psn + goal.length() + 1).toLowerCase();
+				}
+
+				// If before and after aren't letters, we've found the word
+				if (before.equals(" ") && after.equals(" ")) {
+					return psn;
+				}
+				// The last position didn't work, so let's find the next, if there
+				// is one.
+				psn = phrase.indexOf(goal.toLowerCase(), psn + 1);
+			}
+
+			return -1;
+		}
+		
 		
 		
 		//Your task pt 2:
@@ -77,6 +102,7 @@ public class Split
 
 		
 
+	}
 
 }
 
