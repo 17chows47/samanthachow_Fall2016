@@ -34,23 +34,25 @@ public class Split
 		
 		// dont use split if bread doesnt appear more than once. find keyword bread
 		// before bread? after bread?
-		/* x bread NOT  ; 1 bread 0 bread
-		 * bread NOT
-		 * x NOT
-		 * bread x NOT
-		 * bread x bread = X
-		 * x bread y NOT
-		 * bread bread x NOT ; nothing in between
-		 * bread bread NOT
+		/* -x bread NOT  ; 1 bread 0 bread
+		 * -bread NOT
+		 * -x NOT
+		 * -bread x NOT
+		 * -x bread y NOT
+		 * -bread bread x NOT ; nothing in between
+		 * -bread bread NOT
+		 * -bread x bread = X
+		 * - x bread y bread =  Y
+		 * 
 		 * x bread y bread z = Y
-		 * x bread y bread =  Y
+		 * bread x bread y = X
 		 * 
 		 
 		 * if test more than one bread
 		 *  else if true test if anything inside bread 
 		 *  else test whats inside
 		 */
-		insideSandwich("breadeverythingelsebreadcheese");
+		insideSandwich("bananabreadapplebread");
 	}
 		
 		public static void insideSandwich(String sandwich){	
@@ -58,16 +60,36 @@ public class Split
 			if(sandwich.indexOf("bread") < 0){
 				System.out.println("Not a Sandwich");
 			}
-			// one bread = not a sandwich
-			String bread = sandwich.substring(sandwich.indexOf("bread")+5);	 //location of bread
-			if(bread.indexOf("bread") < 0){
+			// one bread = not a sandwich 
+			String substringAfterFirstBread = sandwich.substring(sandwich.indexOf("bread")+5); 
+			//location of potential second bread
+			if(substringAfterFirstBread.indexOf("bread") <= 0){
 				System.out.println("Not a Sandwich");
 			}else{
-			String stuffNotBread [] = sandwich.split("bread");
-			System.out.println(Arrays.toString(stuffNotBread));
+				String stuffNotBread [] = sandwich.split("bread");
+				// x bread y bread = X 
+				//System.out.println(Arrays.toString(stuffNotBread));
+				if((sandwich.indexOf("bread") > 0 ) && (substringAfterFirstBread.indexOf("bread") > 0)){
+					for(int j = 1 ; j < stuffNotBread.length; j++){
+						System.out.print(stuffNotBread[j]);
+					}
+//				}// bread x bread y = X
+//				else if((sandwich.indexOf("bread") == 0 ) && (substringAfterFirstBread.indexOf("bread") < stuffNotBread.length-1 )){
+//					for(int k = 0; k < stuffNotBread.length; k++){
+//						System.out.print(stuffNotBread[k]);
+//					}
+				// normal sandwich (bread x bread) = sandwich
+				}else if(substringAfterFirstBread.indexOf("bread") > 0 ){
+				//System.out.println(Arrays.toString(stuffNotBread));
+					for(int i = 0; i < stuffNotBread.length; i++){
+						System.out.print(stuffNotBread[i]);
+					}
+				}
 			}
 		}
 		
+//		System.out.println(Arrays.toString(stuffNotBread));
+//		
 		
 		//Your task pt 2:
 		/*Write a method that take in a string like "apples pineapples bread lettus tomato bacon mayo ham bread cheese" describing a sandwich
