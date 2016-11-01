@@ -3,8 +3,6 @@ import java.util.Arrays;
 public class Split
 {
 
-	
-	
 	public static void main(String[] args) 
 	{
 		String phrase = "The best cookies in the world are cookies made in the oven";
@@ -52,7 +50,18 @@ public class Split
 		 *  else if true test if anything inside bread 
 		 *  else test whats inside
 		 */
-		insideSandwich("breadstuffinsidebready");
+		
+		insideSandwich("bread");
+		insideSandwich("breadmeat");
+		insideSandwich("breadbread");
+		insideSandwich("breadbreadmeat");
+		insideSandwich("saucebread");
+		insideSandwich("meat");
+		insideSandwich("bananabreadonemeatbread");
+		insideSandwich("breadtwomeatbread");
+		insideSandwich("bananabreadthreemeatbreadend");
+		insideSandwich("breadfourmeatbreadend");
+		splitSandwichSpaces("sauce bread five meat with spaces bread");
 	}
 		
 		public static void insideSandwich(String sandwich){	
@@ -68,28 +77,38 @@ public class Split
 			}else{
 				String stuffNotBread [] = sandwich.split("bread");
 				// x bread y bread = X 
-				//System.out.println(Arrays.toString(stuffNotBread));
 				if((sandwich.indexOf("bread") > 0 ) && (substringAfterFirstBread.indexOf("bread") > 0)){
-					for(int j = 1 ; j < stuffNotBread.length; j++){
-						System.out.print(stuffNotBread[j]);
+					for(int i = 1 ; i < stuffNotBread.length; i++){
+						System.out.print(stuffNotBread[i]);
 					}
-				}// normal sandwich (bread x bread) = sandwich
-				else if(substringAfterFirstBread.indexOf("bread") > 0 ){
-				//System.out.println(Arrays.toString(stuffNotBread));
+				// normal sandwich (bread x bread) = sandwich
+				}else if(substringAfterFirstBread.indexOf("bread") > 0 ){
 					for(int i = 0; i < stuffNotBread.length; i++){
 						System.out.print(stuffNotBread[i]);
 					}
-				}
-				else if((sandwich.indexOf("bread") < 0 ) && (substringAfterFirstBread.indexOf("bread") > 0)){
-					for(int k = 0; k < stuffNotBread.length-1; k++){
-						System.out.print(stuffNotBread[k]);
+				// x bread y bread z = Y
+				}else if(sandwich.indexOf("bread") > 0){
+					for(int i = 1; i < stuffNotBread.length-1; i++){
+						System.out.print(stuffNotBread[i]);
+					}
+				// bread x bread y = X
+				}else{
+					for (int i = 0; i < stuffNotBread.length-1; i++){
+						System.out.print(stuffNotBread[i]);
 					}
 				}
+				System.out.println(" ");
 			}
-		}
+		}	
 		
-//		System.out.println(Arrays.toString(stuffNotBread));
-//		
+		public static void splitSandwichSpaces(String sandwich){
+			//sandwich with spaces
+			String [] sandwichNoSpace= sandwich.split(", ");
+			//find inside sandwich
+			insideSandwich(Arrays.toString(sandwichNoSpace));
+		}
+}
+	
 		
 		//Your task pt 2:
 		/*Write a method that take in a string like "apples pineapples bread lettus tomato bacon mayo ham bread cheese" describing a sandwich
@@ -100,5 +119,4 @@ public class Split
 		
 
 
-}
 

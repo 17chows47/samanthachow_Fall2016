@@ -7,16 +7,16 @@ public class LotsOfCopies {
 		int [] arrMain = {1, 2, 3, 4, 5};
 		System.out.println(num);
 		System.out.println(strMain);
-		System.out.println(Arrays.toString(arrMain));
-		changeMe(num, strMain, arrMain);
+		System.out.println(arrMain);
+		changeMe(num, strMain);
 		System.out.println(num);
 		System.out.println(strMain);
-		System.out.println(Arrays.toString(arrMain));
+		System.out.println(arrMain);
 	}
 	
 	public static void changeMe(int x, String str, int [] arr){
-		int num = 12;
-		String strMain = "New String";
-		int [] arrMain = {2, 4, 6, 8, 10};
+		x = 12;
+		str = "New String";
+		arrMain = {2, 4, 6, 8, 10};
 	}
 }

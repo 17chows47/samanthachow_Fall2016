@@ -1,3 +1,13 @@
+/* Samantha Chow
+ * 10/30/16
+ * APCS Period 1
+ * Split String
+ * 
+ * This Program takes in a string without spaces and with spaces, the contents of a sandwich
+ * and returns the items inside the pieces of bread, but not anything outside the bread.
+ * Returns "not a sandwich if it's not a sandwich
+ */
+
 import java.util.Arrays;
 
 public class Split
@@ -5,6 +15,7 @@ public class Split
 
 	public static void main(String[] args) 
 	{
+		//Playing around with Split method
 		String phrase = "The best cookies in the world are cookies made in the oven";
 		String find = "cookies";
 		System.out.println(Arrays.toString(phrase.split(find)));
@@ -12,56 +23,34 @@ public class Split
 		System.out.println(Arrays.toString("I really like really red apples".split("really")));
 		System.out.println(Arrays.toString("I reallyreally like apples!".split("really")));
 		
-		//String.split();
-		//It's a method that acts on a string, <StringName>.split(<String sp>);
-		//Where sp is the string where the string splits
-		//And it returns an array
-		// Example: "I like apples!".split(" "); 
-		//		it will split at spaces and return an array of ["I","like","apples!"]
-		// Example 2: "I really like really red apples"split("really")
-		//		it will split at the word "really" and return an array of ["I "," like "," apples!"]
 		
-		//play around with String.split! what happens if you "I reallyreally like apples".split("really") ?
-		
-		
-		//Your task:
-		/*Write a method that take in a string like "applespineapplesbreadlettustomatobaconmayohambreadcheese" describing a sandwich
-		 * use String.split to split up the sandwich by the word "bread" and return what's in the middle of the sandwich and ignores what's on the outside
-		 * What if it's a fancy sandwich with multiple pieces of bread?
-		*/
-		
-		// dont use split if bread doesnt appear more than once. find keyword bread
-		// before bread? after bread?
-		/* -x bread NOT  ; 1 bread 0 bread
-		 * -bread NOT
-		 * -x NOT
-		 * -bread x NOT
-		 * -x bread y NOT
-		 * -bread bread x NOT ; nothing in between
-		 * -bread bread NOT
-		 * -bread x bread = X
-		 * - x bread y bread =  Y
-		 * 
-		 * x bread y bread z = Y
-		 * bread x bread y = X
-		 * 
-		 
-		 * if test more than one bread
-		 *  else if true test if anything inside bread 
-		 *  else test whats inside
-		 */
-		
+		// bread = NOT
 		insideSandwich("bread");
+		// bread x = NOT
 		insideSandwich("breadmeat");
+		 //bread bread = NOT
 		insideSandwich("breadbread");
+		 // bread bread x = NOT
 		insideSandwich("breadbreadmeat");
+		// x bread = NOT
 		insideSandwich("saucebread");
+		// x = NOT
 		insideSandwich("meat");
+		// x bread y = NOT
+		insideSandwich("sauce bread meat");
+		// x bread y bread = Y
 		insideSandwich("bananabreadonemeatbread");
+		 //bread x bread = X
 		insideSandwich("breadtwomeatbread");
-		insideSandwich("bananabreadthreemeatbreadend");
-		insideSandwich("breadfourmeatbreadend");
+		 // bread x bread y bread = XY
+		insideSandwich("breadcheesebreadlettucebread");
+		 //x bread y bread z = Y
+		insideSandwich("bananabreadthreemeatbreadsauce");
+		 // bread x bread y = X
+		insideSandwich("breadfourmeatbreadsauce");
+		// sandwich with spaces 
 		splitSandwichSpaces("sauce bread five meat with spaces bread");
+		
 	}
 		
 		public static void insideSandwich(String sandwich){	
@@ -108,15 +97,3 @@ public class Split
 			insideSandwich(Arrays.toString(sandwichNoSpace));
 		}
 }
-	
-		
-		//Your task pt 2:
-		/*Write a method that take in a string like "apples pineapples bread lettus tomato bacon mayo ham bread cheese" describing a sandwich
-		 * use String.split to split up the sandwich at the spaces, " ", and return what's in the middle of the sandwich and ignores what's on the outside
-		 * Again, what if it's a fancy sandwich with multiple pieces of bread?
-		*/
-
-		
-
-
-
