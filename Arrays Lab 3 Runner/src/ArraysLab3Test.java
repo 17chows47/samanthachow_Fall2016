@@ -1,7 +1,7 @@
-package arrays_materials;
+//package arrays_materials;
 
 
-import static org.junit.Assert.*;
+//import static org.junit.Assert.*;
 
 
 import java.util.Arrays;

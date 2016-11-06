@@ -10,7 +10,7 @@ public class ArraysLab3
 	 * Write a method named sum that accepts two arrays of integers arr1 and arr2 
 	 * and returns an array of integers, 
 	 * in which every element is the sum of the elements at that index for the arrays arr1 and arr2. 
-	 * You can assume arrays arr1 and arr2 have at least one element each and are the same length.
+	 * You can assume arrays arr1 an d arr2 have at least one element each and are the same length.
 	 */
 	public static int[] sum(int[] arr1, int[] arr2)
 	{
@@ -55,6 +55,14 @@ public class ArraysLab3
 		assert (arr.length >= 2);
 		
 		
+		int[] removeArray = new int[arr.length-1];
+		for(int i = 0; i < idx; i++){
+			removeArray[i] = arr[i];
+		}
+		for(int j = (idx+1); j < arr.length; j++){
+			removeArray[j-1] = arr[j];
+		}
+		return removeArray;
 	}
 	
 	/*
@@ -117,28 +125,53 @@ public class ArraysLab3
 				a1
 	 */
 	
-	public static void main(String[] args) 
-	{
-		int[] arr1 = {5, 10, 15, 20, 25, 30, 35, 40};
-		int[] arr2 = {7, 14, 21, 28, 35, 42, 49, 56};
-		int[] sumArr = new int[arr1.length];
-		int[] appendArr = new int[arr1.length+1];
-		int[] removeArr = new int[arr1.length-1];
+	public static void main(String[] args) {
+		//declare
+				int[] arr1 = {5, 10, 15, 20, 25, 30, 35, 40};
+				int[] arr2 = {7, 14, 21, 28, 35, 42, 49, 56};
+				int appendnum = 200;
+				int removeidx = 5;
+		//call
+				int[] sumArr = sum(arr1, arr2);
+				int[] appendArr = append(arr1, appendnum);
+				int[] removeArr = remove(arr2, removeidx);
+				int sumOfEvens = sumEven(appendArr);
+				rotateRight(arr1);
+		//print		
+				System.out.println(Arrays.toString(sumArr));
+				System.out.println(Arrays.toString(appendArr));
+				System.out.println(Arrays.toString(removeArr));
+				System.out.println(sumOfEvens);
+				System.out.println(Arrays.toString(arr1));
+			}
+	
+	
+//	public static void main(String[] args) 
+//	{
+//		int[] arr1 = {5, 10, 15, 20, 25, 30, 35, 40};
+//		int[] arr2 = {7, 14, 21, 28, 35, 42, 49, 56};
+//		int[] sumArr = new int[arr1.length];
+//		int[] appendArr = new int[arr1.length+1];
+//		int[] removeArr = new int[arr1.length-1];
+//		
+//		int appendNum = 200;
+//		int removeIdx = 5;
+//		int sumOfEvens;
+//		
 		
-		int appendNum = 200;
-		int removeIdx = 5;
-		int sumOfEvens;
-		
-		
-		sumArr = sum(arr1, arr2);
-		System.out.println(Arrays.toString(sumArr));
-		appendArr = append(arr1, appendNum);
-		System.out.println(Arrays.toString(appendArr));
-		
-		sumOfEvens = sumEven(appendArr);
-		System.out.println(sumOfEvens);
-		
-		rotateRight(arr1);
-		System.out.println(Arrays.toString(arr1));
-	}
+//		sumArr = sum(arr1, arr2);
+//		System.out.println(Arrays.toString(sumArr));
+//		
+//		appendArr = append(arr1, appendNum);
+//		System.out.println(Arrays.toString(appendArr));
+//		
+//		removeArr = remove(arr2, removeIdx);
+//		System.out.println(Arrays.toString(removeArr));
+//				
+//		sumOfEvens = sumEven(appendArr);
+//		System.out.println(sumOfEvens);
+//		
+//		rotateRight(arr1);
+//		System.out.println(Arrays.toString(arr1));
+	//}
 }
