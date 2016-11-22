@@ -1,15 +1,3 @@
-/* Samantha Chow
- * 11/21/16
- * APCS1
- * FracCalc
- * 
- * FracCalc parses the first and second operand of multiple lines of input, until the user enters 'quit', 
- * and returns the parsed operand 2 to the screen.
- * The parts are 'whole:', 'numerator:', and 'denominator'. 
- * 
- */
-
-
 package fracCalc;
 import java.util.*;
 
