@@ -1,0 +1,122 @@
+/* Samantha Chow
+ * 11/21/16
+ * APCS1
+ * FracCalc
+ * 
+ * FracCalc parses the first and second operand of multiple lines of input, until the user enters 'quit', 
+ * and returns the parsed operand 2 to the screen.
+ * The parts are 'whole:', 'numerator:', and 'denominator'. 
+ * 
+ */
+
+
+package fracCalc;
+import java.util.Scanner;
+public class FracCalc {
+
+    public static void main(String[] args){
+        Scanner userInput = new Scanner(System.in);
+        System.out.println("Enter in a statement to calculate: ");
+        String statement = userInput.nextLine();
+
+        while (!(statement.equals("quit"))){
+        	System.out.println(produceAnswer(statement));
+    		System.out.println("Enter in a statement to calculate: ");
+        	statement = userInput.nextLine();        	
+        }
+
+    }
+    public static String produceAnswer(String statement){ 
+        String firstPart = "";
+        String operator = "";
+        String secondPart = "";
+        String [] frac = statement.split(" ");
+        firstPart = frac[0];
+        operator = frac[1];
+        secondPart = frac[2];
+//        if(statement.indexOf("+") > 0){
+//        	firstPart = statement.substring(0,statement.indexOf(" + ")); 
+//        	operator = "+";
+//        	secondPart = statement.substring(statement.indexOf("+") + 2);
+//        }else if(statement.indexOf(" - ") > 0){
+//        	firstPart = statement.substring(0,statement.indexOf(" - ")); 
+//        	operator = "-";
+//        	secondPart = statement.substring(statement.indexOf("-") + 2);
+//        }else if(statement.indexOf(" / ") > 0){
+//        	firstPart = statement.substring(0,statement.indexOf(" / ")); 
+//        	operator = "/";
+//        	secondPart = statement.substring(statement.indexOf(" / ") + 1);
+//        }else if(statement.indexOf(" * ") > 0){
+//        	firstPart = statement.substring(0,statement.indexOf(" * ")); 
+//        	operator = "*";
+//        	secondPart = statement.substring(statement.indexOf("*") + 2);
+//        } 	
+    	//parsed operand 2
+        int oneWholeNum =1;
+    	int oneNumerator=1;
+    	int oneDenom=1;
+    	
+    	int twoWholeNum=1;
+    	int twoNumerator=1;
+    	int twoDenom=1;
+    	//whole number
+    	if(!(secondPart.indexOF("/") > 0) && !(secondPart.indexOf("_") > 0)){
+    		twoWholeNum = Integer.parseInt(secondPart);
+    		twoNumerator = 0;
+    		twoDenom = 1;
+    	}else if(!(secondPart.indexOf("_") > 0) && (secondPart.indexOf("/") > 0 )){
+    		twoWholeNum = 0;
+    		twoNumerator = Integer.parseInt(secondPart.substring(0, secondPart.indexOf("/")));
+    		twoDenom = Integer.parseInt(secondPart.substring(secondPart.indexOf("/") + 1));
+    	}else if((secondPart.indexOf("_") > 0) && (secondPart.indexOf("/") > 0)){
+    		twoWholeNum = Integer.parseInt(secondPart.substring(0, secondPart.indexOf("_")));
+    		twoNumerator = Integer.parseInt(secondPart.substring(secondPart.indexOf("_") + 1, secondPart.indexOf("/")));
+    		twoDenom = Integer.parseInt(secondPart.substring(secondPart.indexOf("/") + 1));
+    	}
+//		if (!(secondPart.indexOf("/") > 0) && !(secondPart.indexOf("_") > 0)){
+//			twoWholeNum = Integer.parseInt(secondPart);
+//			twoNumerator = 0;
+//			twoDenom = 1;
+//		}
+//		//fraction
+//		else if (!(secondPart.indexOf("_") > 0) && (secondPart.indexOf("/") > 0)){
+//			twoWholeNum = 0;
+//			twoNumerator = Integer.parseInt(secondPart.substring(0, secondPart.indexOf("/")));
+//			twoDenom = Integer.parseInt(secondPart.substring(secondPart.indexOf("/") + 1));
+//		}
+//		//mixed fraction
+//		else if((secondPart.indexOf("_") > 0) && (secondPart.indexOf("/") > 0)) {
+//			twoWholeNum = Integer.parseInt(secondPart.substring(0,secondPart.indexOf("_")));
+//			twoNumerator = Integer.parseInt(secondPart.substring(secondPart.indexOf("_") + 1, secondPart.indexOf("/")));
+//			twoDenom = Integer.parseInt(secondPart.substring(secondPart.indexOf("/") + 1));
+//		}
+		
+		return "whole: " + twoWholeNum + " numerator: " + twoNumerator + " denominator: " + twoDenom;
+    	//parsed operand 1
+		
+    	//whole number
+//    	if(!(firstPart.indexOf("/") > 0) && !(firstPart.indexOf("_") > 0)){
+//    		oneWholeNum = Integer.parseInt(firstPart);
+//    		oneNumerator = 0;
+//			oneDenom = 1;
+//    	}
+//    	//fraction
+//    	else if(!(firstPart.indexOf("_") > 0) && (firstPart.indexOf("/") > 0)){
+//			oneWholeNum = 0;
+//			oneNumerator = Integer.parseInt(firstPart.substring(0, firstPart.indexOf("/")));
+//			oneDenom = Integer.parseInt(firstPart.substring(firstPart.indexOf("/") + 1));
+//		}
+//		//mixed fraction
+//		else if((firstPart.indexOf("_") > 0) && (firstPart.indexOf("/") > 0)) {
+//			oneWholeNum = Integer.parseInt(firstPart.substring(0,firstPart.indexOf("_")));
+//			oneNumerator = Integer.parseInt(firstPart.substring(firstPart.indexOf("_") + 1, firstPart.indexOf("/")));
+//			oneDenom = Integer.parseInt(firstPart.substring(firstPart.indexOf("/") + 1));
+//		}
+//		
+//    		
+    	
+    	//return operator;
+    }
+}   
+
+
