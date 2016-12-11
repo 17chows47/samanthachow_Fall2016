@@ -8,6 +8,7 @@
 		<item value="true" key="wrap"/>
 		<item value="true" key="wholeword"/>
 		<list key="findhistory">
+			<item value="a"/>
 			<item value="secondOperand"/>
 			<item value="secondOperator"/>
 			<item value="firstOperand"/>
@@ -15,7 +16,6 @@
 			<item value="secondNumerator"/>
 			<item value="secondWholeNumber"/>
 			<item value="firstDenominator"/>
-			<item value="firstNumerator"/>
 		</list>
 		<list key="replacehistory">
 			<item value="secondPart"/>
