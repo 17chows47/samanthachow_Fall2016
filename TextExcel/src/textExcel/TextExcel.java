@@ -12,9 +12,13 @@ public class TextExcel
 
 	public static void main(String[] args)
 	{
+		Spreadsheet sheet = new Spreadsheet(20,12);
 		Scanner input = new Scanner(System.in);
-		String cellDeclaration = input.nextLine();
-		System.out.println(Spreadsheet.processCommand(cellDeclaration));
-		// Add your command loop here
+		String declaration = input.nextLine();
+		while (!declaration.equals("quit")) {
+			System.out.println(sheet.processCommand(declaration));
+			
+		}
+			
 	}
 }
