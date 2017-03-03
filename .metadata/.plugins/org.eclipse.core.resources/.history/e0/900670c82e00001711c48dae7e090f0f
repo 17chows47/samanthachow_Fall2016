@@ -7,8 +7,8 @@ public class Spreadsheet implements Grid
 
 	private EmptyCell data[][];
 	
-	public Spreadsheet() {
-		data = new EmptyCell[12][20];
+	public Spreadsheet(int rows, int cols) {
+		data = new EmptyCell[rows][cols];
 	}
 
 	@Override
@@ -21,6 +21,7 @@ public class Spreadsheet implements Grid
 	@Override
 	public int getRows(){
 		return data.length;
+
 	}
 
 	@Override

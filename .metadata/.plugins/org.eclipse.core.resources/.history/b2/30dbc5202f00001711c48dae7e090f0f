@@ -21,6 +21,7 @@ public class Spreadsheet implements Grid
 	@Override
 	public int getRows(){
 		return data.length;
+
 	}
 
 	@Override

@@ -20,12 +20,12 @@ public class Spreadsheet implements Grid
 
 	@Override
 	public int getRows(){
-		return data.length;
+		return data.length-1;
 	}
 
 	@Override
 	public int getCols(){
-		return data[0].length;
+		return data[0].length-1;
 	}
 
 	@Override
