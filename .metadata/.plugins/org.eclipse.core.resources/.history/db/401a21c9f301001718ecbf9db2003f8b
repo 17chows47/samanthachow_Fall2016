@@ -10,28 +10,29 @@ public class SpreadsheetLocation implements Location
 			
     @Override
     public int getRow(){
+        // TODO Auto-generated method stub
         return row;
     }
 
     @Override
     public int getCol(){
+        // TODO Auto-generated method stub
     	return column;
     } 
-    
     public void parseCell(String cellName){
         String cell[] = new String[2];
  		cell[0] = cellName.charAt(0) + "";
-        cell[1] = cellName.substring(1);
+        cell[1] = cellName.charAt(1) + cellName.charAt(2) + "";
         for (int i = 0; i < letters.length(); i++){
         	if (cellName.charAt(0) == letters.charAt(i)){
         		column = i;
         	}
         }
-        int rowInt = Integer.parseInt(cell[1]);
-        row = rowInt - 1; 
+        row = Integer.parseInt(cell[1]);
     }
 
     public SpreadsheetLocation(String cellName){
     	parseCell(cellName);
     }
+
 }

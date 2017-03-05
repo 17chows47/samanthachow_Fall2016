@@ -10,14 +10,15 @@ public class SpreadsheetLocation implements Location
 			
     @Override
     public int getRow(){
+        // TODO Auto-generated method stub
         return row;
     }
 
     @Override
     public int getCol(){
+        // TODO Auto-generated method stub
     	return column;
     } 
-    
     public void parseCell(String cellName){
         String cell[] = new String[2];
  		cell[0] = cellName.charAt(0) + "";
@@ -34,4 +35,5 @@ public class SpreadsheetLocation implements Location
     public SpreadsheetLocation(String cellName){
     	parseCell(cellName);
     }
+
 }
