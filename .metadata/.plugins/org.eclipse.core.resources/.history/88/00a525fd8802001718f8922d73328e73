@@ -9,13 +9,13 @@ public class EmptyCell implements Cell {
 	@Override
 	public String abbreviatedCellText() {
 		// TODO implement abbreviatedCellText in EmptyCell
-		return "";
+		return null;
 	}
 
 	@Override
 	public String fullCellText() {
 		// TODO implement fullCellText in EmptyCell
-		return "";
+		return null;
 	}
 	
 

@@ -14,20 +14,16 @@ public class Spreadsheet implements Grid
 	@Override
 	public String processCommand(String command){
 		// TODO Auto-generated method stub
-		// 
-		//if/else, order matters
-		//inspect cells
-		//assign string
-		//clear all
-		//clear cell
 		return command;
 	}
 
+	@Override
 	public int getRows(){
 		int rows = data.length;
 		return rows;
 	}
 
+	@Override
 	public int getCols(){
 		int columns = data[0].length;
 		return columns;
