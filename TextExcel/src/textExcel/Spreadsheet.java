@@ -5,7 +5,9 @@ package textExcel;
 public class Spreadsheet implements Grid
 {
 
-	private EmptyCell[][] data;
+	private Cell[][] data;
+	private String letters = "ABCDEFJHIJKLMNOPQRSTUVWXYZ";
+
 	
 	public Spreadsheet() {
 		data = new EmptyCell[20][12];
@@ -41,9 +43,29 @@ public class Spreadsheet implements Grid
 	}
 
 	@Override
-	public String getGridText()
-	{
-		// TODO Auto-generated method stub
+	public String getGridText(){
+		
+//		for (int i = 0; i < 12; i++){
+//			System.out.print("|" + letters.charAt(i) + "         ");
+//		}	        
+//		System.out.print("|");
+//		int counter = 0;
+//		for(int j = 0; j < data.length ; j++){
+//			counter++;
+//			for(int k = 0; k < data[0].length; k++ ){
+//				if (counter < 10){
+//					System.out.print(counter + "  ");
+//				}else{
+//					System.out.print(counter + " ");
+//				}
+//				System.out.print("|");
+//				for(int a = 0; a < 10; a++){
+//					System.out.print(" ");
+//				}
+//			}
+//			System.out.print("|");
+//		}
+
 		return null;
 	}
 
