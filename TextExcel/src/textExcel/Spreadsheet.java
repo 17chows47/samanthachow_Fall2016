@@ -11,6 +11,11 @@ public class Spreadsheet implements Grid
 	
 	public Spreadsheet() {
 		data = new EmptyCell[20][12];
+		for (int i = 0; i < data.length; i ++){
+			for (int j = 0; j < data[i].length; j++){
+				data[i][j] = new EmptyCell();
+			}
+		}
 	}
 
 	@Override
@@ -36,37 +41,38 @@ public class Spreadsheet implements Grid
 	}
 
 	@Override
-	public Cell getCell(Location loc)
-	{
-		// TODO Auto-generated method stub
-		return null;
+	public Cell getCell(Location loc){
+		int r = loc.getRow();
+		int c = loc.getCol();
+		return data[r][c];
 	}
 
 	@Override
 	public String getGridText(){
 		
-//		for (int i = 0; i < 12; i++){
-//			System.out.print("|" + letters.charAt(i) + "         ");
-//		}	        
-//		System.out.print("|");
-//		int counter = 0;
-//		for(int j = 0; j < data.length ; j++){
-//			counter++;
-//			for(int k = 0; k < data[0].length; k++ ){
-//				if (counter < 10){
-//					System.out.print(counter + "  ");
-//				}else{
-//					System.out.print(counter + " ");
-//				}
-//				System.out.print("|");
-//				for(int a = 0; a < 10; a++){
-//					System.out.print(" ");
-//				}
-//			}
-//			System.out.print("|");
-//		}
-
-		return null;
+		String topRow = "   ";
+		String middle = "";
+		
+		for (int i = 0; i < 12; i++){
+			topRow += ("|" + letters.charAt(i) + "         ");
+		}	        
+		
+		topRow += ("| \n");
+		
+		for(int j = 0; j < 20 ; j++){
+			if (j < 9){
+				middle += ((j+1) + "  ");
+			}else{
+				middle += ((j+1) + " ");
+			}
+			for(int k = 0; k < 12 ; k++ ){	
+				middle += "|" + data[j][k].abbreviatedCellText() ;
+			}
+			middle += ("|");
+			middle += ("\n");
+		}
+	
+		return topRow + middle;
 	}
 
 }
