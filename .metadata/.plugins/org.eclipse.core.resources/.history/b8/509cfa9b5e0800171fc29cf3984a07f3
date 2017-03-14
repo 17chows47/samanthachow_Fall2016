@@ -37,6 +37,7 @@ public class Spreadsheet implements Grid
 //			return(getCell(command));
 //		}else{ // cell inspection 
 			
+		}
 		//if/else, order matters
 		//inspect cells
 		//assign string

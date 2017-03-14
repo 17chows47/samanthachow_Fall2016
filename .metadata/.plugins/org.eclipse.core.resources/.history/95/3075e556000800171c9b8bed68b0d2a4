@@ -7,6 +7,7 @@ public class Spreadsheet implements Grid
 
 	private Cell[][] data;
 	private String letters = "ABCDEFJHIJKLMNOPQRSTUVWXYZ";
+
 	
 	public Spreadsheet() {
 		data = new EmptyCell[20][12];
@@ -19,24 +20,9 @@ public class Spreadsheet implements Grid
 
 	@Override
 	public String processCommand(String command){
-//		if (command.contains("clear")){
-			if (command.contains(" ")){ // clear A1
-				String letter = command.substring(command.indexOf(" ") + 1, command.indexOf(" ") + 2);
-				int row = Integer.parseInt(letter);
-				String number = command.substring(command.indexOf(" ") + 2);
-				int column = Integer.parseInt(number);
-				data[row][column] = new EmptyCell();
-			}else{ // clear whole sheet
-				for (int i = 0; i < data.length; i ++){
-					for (int j = 0; j < data[i].length; j++){
-						data[i][j] = new EmptyCell();
-					}
-				}
-			}
-//		}else if(command.contains("=")){ // assignment 
-//			return(getCell(command));
-//		}else{ // cell inspection 
-			
+		if(command.contains("=") = 0){
+			getCell(command);
+		}
 		//if/else, order matters
 		//inspect cells
 		//assign string

@@ -19,13 +19,11 @@ public class Spreadsheet implements Grid
 
 	@Override
 	public String processCommand(String command){
-//		if (command.contains("clear")){
+		if (command.contains("clear")){
 			if (command.contains(" ")){ // clear A1
-				String letter = command.substring(command.indexOf(" ") + 1, command.indexOf(" ") + 2);
-				int row = Integer.parseInt(letter);
-				String number = command.substring(command.indexOf(" ") + 2);
-				int column = Integer.parseInt(number);
-				data[row][column] = new EmptyCell();
+				String location;
+				location = command.substring(0,location.indexOf(" "));
+				data[SpreadsheetLocation.getRow()][SpreadsheetLocation.getCol()] = new EmptyCell();
 			}else{ // clear whole sheet
 				for (int i = 0; i < data.length; i ++){
 					for (int j = 0; j < data[i].length; j++){
@@ -33,10 +31,11 @@ public class Spreadsheet implements Grid
 					}
 				}
 			}
-//		}else if(command.contains("=")){ // assignment 
-//			return(getCell(command));
-//		}else{ // cell inspection 
+		}else if(command.contains("=")){ // assignment 
+			return(getCell(command));
+		}else{ // cell inspection 
 			
+		}
 		//if/else, order matters
 		//inspect cells
 		//assign string
