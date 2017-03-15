@@ -18,8 +18,26 @@ public class SpreadsheetLocation implements Location
     	return column;
     } 
     
-    public void parseCell(String cellName){
-        String cell[] = new String[2];
+//    public void parseCell(String cellName){
+//        String cell[] = new String[2];
+// 		cell[0] = cellName.charAt(0) + "";
+//        cell[1] = cellName.substring(1);
+//        for (int i = 0; i < letters.length(); i++){
+//        	if (cellName.charAt(0) == letters.charAt(i)){
+//        		column = i;
+//        	}
+//        }
+//        int rowInt = Integer.parseInt(cell[1]);
+//        row = rowInt - 1; 
+//    }
+
+    public SpreadsheetLocation(String cellName){
+//    	parseCell(cellName);
+    	
+    	column = cellName.charAt(0);
+    	row = Integer.parseInt(cellName.substring(1));
+    	
+    	String cell[] = new String[2];
  		cell[0] = cellName.charAt(0) + "";
         cell[1] = cellName.substring(1);
         for (int i = 0; i < letters.length(); i++){
@@ -29,9 +47,6 @@ public class SpreadsheetLocation implements Location
         }
         int rowInt = Integer.parseInt(cell[1]);
         row = rowInt - 1; 
-    }
-
-    public SpreadsheetLocation(String cellName){
-    	parseCell(cellName);
-    }
+    	
+   }
 }

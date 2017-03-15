@@ -23,7 +23,7 @@ public class TextExcel{
     		System.out.println("Enter the stuff: ");
         	declaration = input.nextLine();  
 		}
-		TestsALL.Helper th = new TestsALL.Helper();
-		System.out.println(th.getText());
+//		TestsALL.Helper th = new TestsALL.Helper();
+//		System.out.println(th.getText());
 	}
 }
