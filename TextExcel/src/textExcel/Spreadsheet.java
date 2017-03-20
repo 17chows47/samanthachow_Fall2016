@@ -25,11 +25,12 @@ public class Spreadsheet implements Grid
 		if (userInput[0].toLowerCase().equals("clear")){
 			if(userInput.length > 1){ // clear A1
 				SpreadsheetLocation location = new SpreadsheetLocation(userInput[1].toUpperCase());
-				data [location.getRow()][location.getCol()] = new EmptyCell();
+				int rowNum = location.getRow();
+				int columnNum = location.getCol();
+				data[rowNum][columnNum] = new EmptyCell();
 				return getGridText();
-
 			}else{ // clear whole sheet
-				clearCell();
+				clearCells();
 				return getGridText();
 			}
 		}else if(userInput.length > 1){ // assignment 
@@ -46,7 +47,7 @@ public class Spreadsheet implements Grid
 		}
 	}
 	
-	public void clearCell(){
+	public void clearCells(){
 		for (int i = 0; i < 20; i++){
 			for (int j = 0; j < 12; j++){
 				data[i][j] = new EmptyCell();

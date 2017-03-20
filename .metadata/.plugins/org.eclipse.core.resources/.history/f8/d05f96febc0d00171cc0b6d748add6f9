@@ -41,7 +41,7 @@ public class SpreadsheetLocation implements Location
  		cell[0] = cellName.charAt(0) + "";
         cell[1] = cellName.substring(1);
         for (int i = 0; i < letters.length(); i++){
-        	if (cellName.toUpperCase().charAt(0) == letters.charAt(i)){
+        	if (cellName.charAt(0) == letters.toUpperCase().charAt(i)){
         		column = i;
         	}
         }
