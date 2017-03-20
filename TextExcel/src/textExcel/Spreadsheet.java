@@ -19,21 +19,18 @@ public class Spreadsheet implements Grid
 
 	@Override
 	public String processCommand(String command){
+		
 		String [] userInput = command.split(" ");
+		
 		if (userInput[0].toLowerCase().equals("clear")){
-			if (userInput.length > 1){ // clear A1
+			if(userInput.length > 1){ // clear A1
 				SpreadsheetLocation location = new SpreadsheetLocation(userInput[1].toUpperCase());
 				data [location.getRow()][location.getCol()] = new EmptyCell();
 				return getGridText();
 
 			}else{ // clear whole sheet
-				for (int i = 0; i < 20; i++){
-					for (int j = 0; j < 12; j++){
-						data[i][j] = new EmptyCell();
-					}
-				}
+				clearCell();
 				return getGridText();
-
 			}
 		}else if(userInput.length > 1){ // assignment 
 			SpreadsheetLocation location = new SpreadsheetLocation(userInput[0].toUpperCase());
@@ -46,6 +43,14 @@ public class Spreadsheet implements Grid
 		}else{ // cell inspection 
 			SpreadsheetLocation location = new SpreadsheetLocation(userInput[0].toUpperCase());
 			return getCell(location).fullCellText();
+		}
+	}
+	
+	public void clearCell(){
+		for (int i = 0; i < 20; i++){
+			for (int j = 0; j < 12; j++){
+				data[i][j] = new EmptyCell();
+			}
 		}
 	}
 
