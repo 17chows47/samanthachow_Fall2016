@@ -8,7 +8,6 @@ import java.util.Scanner;
 // Update this file with your own code.
 
 public class TextExcel{
-	
 
 	public static void main(String[] args){
 		Scanner input = new Scanner(System.in);
@@ -21,7 +20,8 @@ public class TextExcel{
 			System.out.println(data.getGridText());
 			System.out.println(data.processCommand(declaration));
     		System.out.println("Enter the stuff: ");
-        	declaration = input.nextLine();  
+        	declaration = input.nextLine();
+        	
 		}
 //		TestsALL.Helper th = new TestsALL.Helper();
 //		System.out.println(th.getText());

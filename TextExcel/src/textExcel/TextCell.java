@@ -8,6 +8,14 @@ public class TextCell implements Cell {
 		cellText = text; 
 	}
 	
+	public void setCellText(String text){
+		cellText = text;
+	}
+	 
+	public String getCellText(){
+		return cellText;
+	}
+	
 	@Override
 	public String abbreviatedCellText() {
 		int numCharacters = cellText.length();
