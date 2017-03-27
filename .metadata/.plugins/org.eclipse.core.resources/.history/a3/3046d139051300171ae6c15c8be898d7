@@ -90,7 +90,9 @@ public class Spreadsheet implements Grid
 				middle += ((j+1) + " ");
 			}
 			for(int k = 0; k < 12 ; k++ ){	
+				System.out.println("dashjhskadhk1");
 				middle += "|" + data[j][k].abbreviatedCellText();
+				System.out.println("dashjhskadhk2");
 			}
 			middle += ("|");
 			middle += ("\n");

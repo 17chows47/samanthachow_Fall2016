@@ -19,6 +19,7 @@ public class Spreadsheet implements Grid
 
 	@Override
 	public String processCommand(String command){
+		System.out.println("dashjhskadhk");
 		String [] userInput = command.split(" ");
 		
 		if (userInput[0].toLowerCase().equals("clear")){
@@ -32,7 +33,7 @@ public class Spreadsheet implements Grid
 				clearCells();
 				return getGridText();
 			}
-		}else if(userInput.length > 1){ // cell assignment
+		}else if(userInput.length > 1){ // cell assignment 
 			SpreadsheetLocation location = new SpreadsheetLocation(userInput[0].toUpperCase());
 			int rowNum = location.getRow();
 			int columnNum = location.getCol();
@@ -83,6 +84,7 @@ public class Spreadsheet implements Grid
 		}	        
 		
 		topRow += ("| \n");
+		
 		for(int j = 0; j < 20 ; j++){
 			if (j < 9){
 				middle += ((j+1) + "  ");
@@ -90,11 +92,12 @@ public class Spreadsheet implements Grid
 				middle += ((j+1) + " ");
 			}
 			for(int k = 0; k < 12 ; k++ ){	
-				middle += "|" + data[j][k].abbreviatedCellText();
+				middle += "|" + data[j][k].abbreviatedCellText() ;
 			}
 			middle += ("|");
 			middle += ("\n");
 		}
+	
 		return topRow + middle;
 	}
 

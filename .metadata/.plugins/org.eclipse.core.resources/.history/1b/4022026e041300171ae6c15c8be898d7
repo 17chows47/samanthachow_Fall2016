@@ -83,6 +83,7 @@ public class Spreadsheet implements Grid
 		}	        
 		
 		topRow += ("| \n");
+		
 		for(int j = 0; j < 20 ; j++){
 			if (j < 9){
 				middle += ((j+1) + "  ");
@@ -90,11 +91,12 @@ public class Spreadsheet implements Grid
 				middle += ((j+1) + " ");
 			}
 			for(int k = 0; k < 12 ; k++ ){	
-				middle += "|" + data[j][k].abbreviatedCellText();
+				middle += "|" + data[j][k].abbreviatedCellText() ;
 			}
 			middle += ("|");
 			middle += ("\n");
 		}
+		System.out.println("dashjhskadhk");
 		return topRow + middle;
 	}
 
