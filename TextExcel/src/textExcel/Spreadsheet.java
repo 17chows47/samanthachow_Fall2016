@@ -6,7 +6,7 @@ public class Spreadsheet implements Grid
 {
 
 	private Cell[][] data;
-	private String letters = "ABCDEFJHIJKLMNOPQRSTUVWXYZ";
+	private String letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 	public Spreadsheet() {
 		data = new Cell[20][12];
@@ -19,8 +19,11 @@ public class Spreadsheet implements Grid
 
 	@Override
 	public String processCommand(String command){
-		String [] userInput = command.split(" ");
-		
+		if (command.length() == 0){
+			return "";
+		}
+		String [] userInput = command.split(" " , 3);
+
 		if (userInput[0].toLowerCase().equals("clear")){
 			if(userInput.length > 1){ // clear A1
 				SpreadsheetLocation location = new SpreadsheetLocation(userInput[1].toUpperCase());
@@ -32,18 +35,16 @@ public class Spreadsheet implements Grid
 				clearCells();
 				return getGridText();
 			}
-		}else if(userInput.length > 1){ // cell assignment
+		}else if(userInput.length > 2){ // cell assignment
 			SpreadsheetLocation location = new SpreadsheetLocation(userInput[0].toUpperCase());
 			int rowNum = location.getRow();
 			int columnNum = location.getCol();
-			String text = userInput[2];
+			String text = userInput[2].substring(1, userInput[2].length() - 1);
 			data[rowNum][columnNum] = new TextCell(text);
 			return getGridText();
 		}else{ // cell inspection 
 			SpreadsheetLocation location = new SpreadsheetLocation(userInput[0].toUpperCase());
-			System.out.println("dashjhskadhk");
-			return data[0][0].fullCellText();
-			//return getCell(location).fullCellText();
+			return getCell(location).fullCellText();
 		}
 	}
 	

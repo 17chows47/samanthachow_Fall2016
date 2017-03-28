@@ -5,7 +5,7 @@ package textExcel;
 public class SpreadsheetLocation implements Location{
 	private int row;
 	private int column;
-	private String letters = "ABCDEFJHIJKLMNOPQRSTUVWXYZ";
+	private String letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 			
     @Override
     public int getRow(){
